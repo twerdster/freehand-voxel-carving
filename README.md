@@ -8,6 +8,8 @@ Original project credits: Alex Fish, Aaron Wetzler, Y. Honen, Ron Kimmel.
 
 Alex Fish's original [iPhone-3D-scanner source](https://github.com/ice00cold/iPhone-3D-scanner) is included as the `source/` Git submodule, pinned to `881f5a8f02d9282d502d4547da0ecb34d5c0f00c`. This is an archival snapshot, not a verified current iOS release. It is distinct from the earlier Kucher/Povichuk volume-carving project.
 
+A November 2026 audit found a hardcoded historical PointCloud SDK application key in the pinned original source. Its ownership and validity have not been established. Do not reuse that key; obtain your own authorized SDK configuration before any build. The upstream snapshot also includes a proprietary static library and an unrelated Windows executable; their presence is not an endorsement to execute or redistribute them. Review the vendor terms and all bundled material before reuse. The pin preserves the original upstream bytes, so this notice does not remove the key from the upstream repository or its history.
+
 ## Running
 
 ```sh
