@@ -1,0 +1,7 @@
+Get:1 http://il.archive.ubuntu.com/ubuntu jammy/universe amd64 libopencv-core-dev amd64 4.5.4+dfsg-9ubuntu4 [1978 kB]
+Get:2 http://il.archive.ubuntu.com/ubuntu jammy/universe amd64 libopencv-core4.5d amd64 4.5.4+dfsg-9ubuntu4 [1166 kB]
+Get:3 http://il.archive.ubuntu.com/ubuntu jammy/universe amd64 libopencv-imgproc-dev amd64 4.5.4+dfsg-9ubuntu4 [1854 kB]
+Get:4 http://il.archive.ubuntu.com/ubuntu jammy/universe amd64 libopencv-imgproc4.5d amd64 4.5.4+dfsg-9ubuntu4 [1395 kB]
+Fetched 6392 kB in 1s (4988 kB/s)
+Get:1 http://il.archive.ubuntu.com/ubuntu jammy/universe amd64 libtbb2 amd64 2020.3-1ubuntu3 [101 kB]
+Fetched 101 kB in 1s (128 kB/s)

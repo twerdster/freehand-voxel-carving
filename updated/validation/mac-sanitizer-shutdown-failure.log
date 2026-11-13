@@ -1,0 +1,34 @@
+Test project <mac-work>/asan
+    Start 1: boundary
+1/4 Test #1: boundary .........................Subprocess aborted***Exception:   1.27 sec
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==269==ERROR: AddressSanitizer: SEGV on unknown address 0x0001049b25dc (pc 0x0001049b25dc bp 0x00016b8e22d0 sp 0x00016b8e22a0 T0)
+==269==The signal is caused by a READ memory access.
+    #0 0x1049b25dc  (<unknown module>)
+    #1 0x10476db88 in tbb::detail::r1::__TBB_InitOnce::~__TBB_InitOnce()+0x38 (libtbb.12.18.dylib:arm64+0x9b88)
+    #2 0x1817f2994 in __cxa_finalize_ranges+0x1d8 (libsystem_c.dylib:arm64e+0x28994)
+    #3 0x1817f2758 in exit+0x28 (libsystem_c.dylib:arm64e+0x28758)
+    #4 0x18195a948 in dyld4::LibSystemHelpers::exit(int) const+0x10 (libdyld.dylib:arm64e+0x1d948)
+    #5 0x1815b42c4  (<unknown module>)
+
+==269==Register values:
+ x[0] = 0x00000001070f3f80   x[1] = 0x0000000000000103   x[2] = 0x0000000000000103   x[3] = 0x00000001e7912978  
+ x[4] = 0x0000000000000000   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000  
+ x[8] = 0x00000001049b25dc   x[9] = 0x0000000000000000  x[10] = 0x000000016b8e0c00  x[11] = 0x000000016b8e0cf0  
+x[12] = 0x0000000000000000  x[13] = 0x0000000000014000  x[14] = 0x0000000000008110  x[15] = 0x0000000105465706  
+x[16] = 0x00000001819693b4  x[17] = 0x00000001eecaa590  x[18] = 0x0000000000000000  x[19] = 0x0000000000000000  
+x[20] = 0x000000010479c558  x[21] = 0x000000010479c000  x[22] = 0x0000000104710030  x[23] = 0x0000000000000000  
+x[24] = 0x0000000000000008  x[25] = 0x00000001e6a54000  x[26] = 0x000000000000001a  x[27] = 0x0000000000000019  
+x[28] = 0x0000000000000019     fp = 0x000000016b8e22d0     lr = 0x000000010476bbc4     sp = 0x000000016b8e22a0  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (<unknown module>) 
+==269==ABORTING
+PASS boundary
+
+    Start 2: zbuffer
+2/4 Test #2: zbuffer ..........................Subprocess aborted***Exception:   0.39 sec
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==279==ERROR: AddressSanitizer: SEGV on unknown address 0x0001024d25dc (pc 0x0001024d25dc bp 0x00016ddc22d0 sp 0x00016ddc22a0 T0)
+==279==The signal is caused by a READ memory access.

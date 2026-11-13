@@ -1,0 +1,13 @@
+{
+  "page_errors": [],
+  "frames": 48,
+  "viewport": [
+    940,
+    760
+  ],
+  "canvas": [
+    900,
+    540
+  ],
+  "webgl": "WebGL 1.0 (OpenGL ES 2.0 Chromium)"
+}

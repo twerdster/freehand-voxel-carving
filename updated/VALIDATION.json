@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-14",
+  "source_pin": "881f5a8f02d9282d502d4547da0ecb34d5c0f00c",
+  "original_source_unchanged": true,
+  "root_readme_unchanged": true,
+  "original_iOS_app_build": "failed before compilation: deprecated armv7/iOS6 target on Xcode16.1",
+  "platforms": {
+    "mac": {
+      "os": "macOS15.1.1 arm64",
+      "compiler": "Apple clang16.0.0",
+      "opencv": "4.12.0",
+      "libpng": "1.6.58",
+      "component_checks_passed": 4,
+      "actual_dataset_views": 36,
+      "sanitizers": "failed at Homebrew TBB shutdown; not counted as a clean sanitizer run",
+      "cmake": "4.0.3"
+    },
+    "linux": {
+      "os": "Ubuntu22.04.5 x86_64",
+      "compiler": "g++11.4.0",
+      "cmake": "3.22.1",
+      "opencv": "4.5.4+dfsg-9ubuntu4",
+      "libpng": "1.6.37",
+      "component_checks_passed": 4,
+      "address_and_undefined_sanitizer_checks": "passed",
+      "full_36_view_sanitized_replay": "passed",
+      "dependency_setup": "private apt downloads/extraction, no sudo or global package modification",
+      "historical_unique_rgb_colors": 10654,
+      "historical_occupancy_reference_mismatches": 0,
+      "metrics": "validation/linux-historical-metrics.json"
+    }
+  },
+  "regression_controls": {
+    "platform": "Ubuntu22.04.5 x86_64, g++11.4.0, ASan/UBSan",
+    "original_boundary_initialization": {
+      "observed_exit": 1,
+      "observed_result": "occupancy boundary assertion failed on poisoned allocation",
+      "log": "validation/linux-ablation-boundary.log"
+    },
+    "original_zbuffer": {
+      "observed_exit": 1,
+      "observed_result": "AddressSanitizer heap-buffer-overflow in original Zbuffer constructor",
+      "log": "validation/linux-ablation-zbuffer.log"
+    }
+  },
+  "primary_result": "validation/mac-historical-metrics.json",
+  "linux_result": "validation/linux-historical-metrics.json",
+  "precise_matrix_variant": "validation/mac-precise-text-metrics.json",
+  "cross_platform": "validation/cross-platform-mesh.json",
+  "measured_scope": "actual recovered C++ carving, meshing and color accumulation; input-view consistency, not held-out 3D accuracy or live SDK operation",
+  "assets": {
+    "dinosaur-reconstruction.png": {
+      "bytes": 158380,
+      "sha256": "08b1442fb5f9438a586be20607fa383d8e9e38de9f5907a50ac60e0b8813bc9c"
+    },
+    "dinosaur-turntable.mp4": {
+      "bytes": 227829,
+      "sha256": "40b00eb2bcb3c294927bd2e330bd1db1d411ded6ec069aa499cdcef6a9837059"
+    },
+    "dinosaur-turntable.gif": {
+      "bytes": 800815,
+      "sha256": "c46fed05777cca1b27cf2b6a1a1d0d423825dfe074dd389ef84a7dd9e52f48cc"
+    }
+  },
+  "claude_review": {
+    "status": "two actual tools-disabled editorial rounds completed",
+    "scope": "editorial review of supplied documentation and verified facts only; no Claude code/runtime/asset inspection",
+    "round1_exit": 0,
+    "round1_useful_feedback": [
+      "CMake minimum aligned with documented CTest invocation",
+      "recovered adapted C++ wording clarified",
+      "separate voting reference distinguished from independent 3D accuracy",
+      "calibration/platform provenance and observed regression outcomes clarified",
+      "private paths moved to private handoff",
+      "colored-vertex wording and setup instructions clarified"
+    ],
+    "round2_exit": 0,
+    "round2_resolution": [
+      "Linux numerical claims confirmed directly against Linux metrics and linked",
+      "sanitizer output directory creation made explicit",
+      "platform and sanitizer qualifications tightened",
+      "private working paths/storage names moved to private handoff"
+    ],
+    "runtime_coverage_added": false
+  },
+  "media": {
+    "gif": {
+      "frames": 48,
+      "width": 640,
+      "height": 384
+    },
+    "mp4": {
+      "frames": 48,
+      "width": 900,
+      "height": 540,
+      "seconds": 4.8
+    },
+    "source": "Mac historical-matrix exported colored triangle mesh",
+    "visual_inspection": "representative profile/front/back frames inspected; browser reported no page errors"
+  }
+}

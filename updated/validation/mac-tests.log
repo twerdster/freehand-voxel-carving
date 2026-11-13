@@ -1,0 +1,13 @@
+Test project <mac-work>/build
+    Start 1: boundary
+1/4 Test #1: boundary .........................   Passed    0.23 sec
+    Start 2: zbuffer
+2/4 Test #2: zbuffer ..........................   Passed    0.01 sec
+    Start 3: carving
+3/4 Test #3: carving ..........................   Passed    0.08 sec
+    Start 4: marching-cubes
+4/4 Test #4: marching-cubes ...................   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.33 sec

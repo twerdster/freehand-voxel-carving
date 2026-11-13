@@ -1,0 +1,146 @@
+{
+  "pin": "881f5a8f02d9282d502d4547da0ecb34d5c0f00c",
+  "files": [
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Cube.cpp",
+      "build_copy": "Cube.cpp",
+      "source_sha256": "3137fc41679a922b8584aeb5c277195d81d22a72a1f276f103262d9bd8b2e9dc",
+      "build_copy_sha256": "3137fc41679a922b8584aeb5c277195d81d22a72a1f276f103262d9bd8b2e9dc",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Cube.h",
+      "build_copy": "Cube.h",
+      "source_sha256": "6b7393d3059894de97b7e7613d98d709ca3708c11467fb5478f372f03bd181f7",
+      "build_copy_sha256": "a1ff04ad5fae0778de12616d0267a52f764dfa143f101e860178d495f5470f67",
+      "changes": [
+        "remove unused Apple OpenGLES includes"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Mesh.cpp",
+      "build_copy": "Mesh.cpp",
+      "source_sha256": "36570bd42158472ad9f9fc61c26f2d16c9fe9272cf71b56150c21aac4fe1c229",
+      "build_copy_sha256": "36570bd42158472ad9f9fc61c26f2d16c9fe9272cf71b56150c21aac4fe1c229",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Mesh.h",
+      "build_copy": "Mesh.h",
+      "source_sha256": "1de113d463052789607b38e0c1d366f70adf81a80757dc01ced301214606f698",
+      "build_copy_sha256": "1de113d463052789607b38e0c1d366f70adf81a80757dc01ced301214606f698",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/ImageData.cpp",
+      "build_copy": "ImageData.cpp",
+      "source_sha256": "de7561464b322a714dec12b73b1feabbb3d16bc5ced5ef89a146695ee8ce2cf8",
+      "build_copy_sha256": "de7561464b322a714dec12b73b1feabbb3d16bc5ced5ef89a146695ee8ce2cf8",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/ImageData.h",
+      "build_copy": "ImageData.h",
+      "source_sha256": "88e5cca4252e40ea9a02c80936eb1886c10520093b2c6b0e475b024670461b0b",
+      "build_copy_sha256": "5bbe3aef5dd2943401a7b738e7eb283dda5a7ea1ae9ad6637993bd3fa6dd78f2",
+      "changes": [
+        "include only the OpenCV core/imgproc modules actually used"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Zbuffer.cpp",
+      "build_copy": "Zbuffer.cpp",
+      "source_sha256": "4a5294cf13ac11279882cb2489b69db00746d1ca67b4212cbd4b662c45bb3dd4",
+      "build_copy_sha256": "90509650745894c7d5430291f8167c1d03f223a252ce46baf4eb5105490fe722",
+      "changes": [
+        "correct height/width and store one scalar depth per single-channel pixel"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Zbuffer.h",
+      "build_copy": "Zbuffer.h",
+      "source_sha256": "216474dda24b62c494ae710609252d6adad0802239aaa6b13b38373698f22164",
+      "build_copy_sha256": "d49b06fdd1f7ffaa849a943e118c083a59f0d8a7ee64c3dbe836346a68d415b7",
+      "changes": [
+        "include only the OpenCV core/imgproc modules actually used"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/MarchingCubes.cpp",
+      "build_copy": "MarchingCubes.cpp",
+      "source_sha256": "f1902b48dad0eb743daafa479d80fdcd0bb5e9bdca5bed8b257c781914250f6f",
+      "build_copy_sha256": "f1902b48dad0eb743daafa479d80fdcd0bb5e9bdca5bed8b257c781914250f6f",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Sculpture.cpp",
+      "build_copy": "Sculpture.cpp",
+      "source_sha256": "63971f57af368f5180e9245ad0c59c156e4a30f7ce58228139ad3ab8808592f9",
+      "build_copy_sha256": "98e30afb7aafc158df6ee1a4237ff466102bbb5c85246aec9986171042923b5d",
+      "changes": [
+        "initialize all occupancy and color bytes before setting the interior"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Triangle.cpp",
+      "build_copy": "Triangle.cpp",
+      "source_sha256": "c8a22bafba1fcdcc69de33a55bfb5dc4f8f6c8b1aac62c5ab38f6d1e5cba6bd7",
+      "build_copy_sha256": "c8a22bafba1fcdcc69de33a55bfb5dc4f8f6c8b1aac62c5ab38f6d1e5cba6bd7",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Vector3D.cpp",
+      "build_copy": "Vector3D.cpp",
+      "source_sha256": "6f5ea9f4a83ce7a4156b6aa6eba42f39fe7d2be0c8118734b107c2c5b8420a22",
+      "build_copy_sha256": "6f5ea9f4a83ce7a4156b6aa6eba42f39fe7d2be0c8118734b107c2c5b8420a22",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Vector3DEx.cpp",
+      "build_copy": "Vector3DEx.cpp",
+      "source_sha256": "b33ba4e2bb13aed74154271c1a06e61210a6539dc2c2eb637626aa101f27dd56",
+      "build_copy_sha256": "b33ba4e2bb13aed74154271c1a06e61210a6539dc2c2eb637626aa101f27dd56",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/MarchingCubes.h",
+      "build_copy": "MarchingCubes.h",
+      "source_sha256": "8a20b864dff128b8deaae5142fadfbce2e5da5eeaecce1e0b11a5c77bfb8e501",
+      "build_copy_sha256": "8a20b864dff128b8deaae5142fadfbce2e5da5eeaecce1e0b11a5c77bfb8e501",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Sculpture.h",
+      "build_copy": "Sculpture.h",
+      "source_sha256": "d9e5d273d171774586cc08c00d5c231bd1433a217157ee79b2344ef198654684",
+      "build_copy_sha256": "0039e11dd2ab4f9b144cc8ab96519cae62e2de0a26f3e7494ca90ddd110ef004",
+      "changes": [
+        "include only the OpenCV core/imgproc modules actually used",
+        "replace removed cv::Vector with std::vector; flatten build-copy include"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Triangle.h",
+      "build_copy": "Triangle.h",
+      "source_sha256": "f4e1ae125f3f55028e7326ced407d361bd95b7ad5427edd9dae485bfecddbf4c",
+      "build_copy_sha256": "aa7ca48e0a08624962bd5d054e832fa35447a209c082b088450679fac9c6d009",
+      "changes": [
+        "include only the OpenCV core/imgproc modules actually used"
+      ]
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Vector3D.h",
+      "build_copy": "Vector3D.h",
+      "source_sha256": "d6770652892b7c0fae796bd33148ca0ce9a1e3342a613359c2df3cec78a32ef6",
+      "build_copy_sha256": "d6770652892b7c0fae796bd33148ca0ce9a1e3342a613359c2df3cec78a32ef6",
+      "changes": []
+    },
+    {
+      "source": "source/PointCloudSample/PointCloudSample/Sculptor/Vector3DEx.h",
+      "build_copy": "Vector3DEx.h",
+      "source_sha256": "9e3decaac2b7d5c27bf5764df12d8ad9fc08837d2a68955752b5490dd8b5d35f",
+      "build_copy_sha256": "9e3decaac2b7d5c27bf5764df12d8ad9fc08837d2a68955752b5490dd8b5d35f",
+      "changes": []
+    }
+  ]
+}

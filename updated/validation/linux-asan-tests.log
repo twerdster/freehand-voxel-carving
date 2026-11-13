@@ -1,0 +1,14 @@
+Internal ctest changing into directory: <linux-work>/asan
+Test project <linux-work>/asan
+    Start 1: boundary
+1/4 Test #1: boundary .........................   Passed    0.02 sec
+    Start 2: zbuffer
+2/4 Test #2: zbuffer ..........................   Passed    0.00 sec
+    Start 3: carving
+3/4 Test #3: carving ..........................   Passed    0.66 sec
+    Start 4: marching-cubes
+4/4 Test #4: marching-cubes ...................   Passed    0.01 sec
+
+100% tests passed, 0 tests failed out of 4
+
+Total Test time (real) =   0.69 sec
