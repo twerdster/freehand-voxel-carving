@@ -36,7 +36,7 @@ These commands retrieve and open the historical project; they do not establish t
 
 Initialize camera-pose tracking, position and scale the voxel cube, capture object views, and use the Mesh screen to inspect segmentation and carve from one or all views. The demo mode skips camera capture and uses bundled example data. Ben Tordoff's space-carving example is credited upstream for the dinosaur images, silhouettes and matrices.
 
-The default voxel grid is 128 by 128 by 128 cells, set by `SCULPTURE_SIZE` in [`source/PointCloudSample/PointCloudSample/Sculptor/Sculpture.h`](source/PointCloudSample/PointCloudSample/Sculptor/Sculpture.h). Mesh display is implemented in the app. OBJ and PLY writing hooks in `MeshView.mm` are guarded by `OBJ_TEST` and `PLY_TEST`, both disabled in the pinned file; they are not an enabled export feature of the default project.
+The default voxel grid is 128 by 128 by 128 cells, set by `SCULPTURE_SIZE` in [`source/PointCloudSample/PointCloudSample/Sculptor/Sculpture.h`](https://github.com/ice00cold/iPhone-3D-scanner/blob/881f5a8f02d9282d502d4547da0ecb34d5c0f00c/PointCloudSample/PointCloudSample/Sculptor/Sculpture.h). Mesh display is implemented in the app. OBJ and PLY writing hooks in `MeshView.mm` are guarded by `OBJ_TEST` and `PLY_TEST`, both disabled in the pinned file; they are not an enabled export feature of the default project.
 
 ## SDK and bundled-material notice
 
