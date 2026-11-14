@@ -5,6 +5,12 @@ the relevant original source. Preserve the source submodule pin and all original
 bytes. Keep the root README as the historical reference; link new usage/results
 only from updated/README.md. Preserve existing terms; do not assign a blanket license.
 
+## Updated-work navigation
+
+Aaron explicitly authorized the root README’s local `New!` badge and exact “Updated and ported for modern hardware” link on 2026-11-14. Keep both linked to `updated/README.md#updated-and-ported-for-modern-hardware`; retain the italic historical-reference qualifier and preserve the rest of the historical root reference. The matching updated README heading must introduce a short, factual account of the actual changes and limitations before the existing visuals, setup and evidence. Keep implementation descriptions and detailed results under `updated/`.
+
+This navigation addition is the authorized exception to older root-README preservation instructions below. Verify the historical body after removing only that block, preserve source hashes/pins and leave historical validation hashes attached to their original freezes. Documentation-only navigation edits do not add runtime coverage or require a package rebuild.
+
 Build with CMake from updated/; the preparation script creates build-tree copies
 and a SHA-256 manifest. Actual carving/meshing/texturing remain recovered C++.
 Use the four CTest checks for affected component changes. Run the 36-view dinosaur

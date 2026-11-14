@@ -1,5 +1,9 @@
 # Offline Freehand Voxel Carving replay
 
+## Updated and ported for modern hardware
+
+The recovered C++ carving, marching-cubes and color routines now build on macOS and Linux through updated dependency interfaces, with fixes to occupancy initialization and depth-buffer dimensions and access. New iOS, Android and desktop interfaces replay the supplied 36-view dinosaur fixture using known camera matrices; live capture and the historical tracking SDK are not restored.
+
 | iPhone 12 · native execution | Offline colored-mesh rendering · macOS |
 | --- | --- |
 | <img src="assets/ios-native.gif" width="230" alt="Actual iPhone screen recording of the new native reconstruction interface"> | <img src="assets/dinosaur-turntable.gif" width="460" alt="Dinosaur reconstructed by the recovered carving and marching-cubes code"> |
