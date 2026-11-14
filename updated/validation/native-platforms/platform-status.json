@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-14",
+  "fixture": "36 actual dinosaur masks/photos with supplied rounded demoP cameras, 128 cubed grid",
+  "native_operator": "Adapted recovered Sculpture carving/marching-cubes/vertex-color code",
+  "occupancy_fnv1a64": "803e245304c9b374",
+  "scope": "All four frontends actually execute native reconstruction; recordings are separate display evidence. No live camera/pose tracking or historical app restoration. No throughput benchmark or independent geometry accuracy.",
+  "platforms": {
+    "ios": {
+      "native_fixture_completed": true,
+      "baseline_counts_and_occupancy_match": true,
+      "result": "ios-result.json",
+      "capture": "ios-capture.json",
+      "video": "../../assets/ios-native.mp4",
+      "gif": "../../assets/ios-native.gif",
+      "artifact": "ios-artifact.json",
+      "tested_device": "iOS18.0.1 on physical iPhone12",
+      "artifact_sha256": "2811d387d3b8a99d828c92f21089ed12c1cc0e4ed6d2e276a533b055f9a3311f",
+      "baseline_gate": "In-app counts/FNV/finite checks plus artifact hashes"
+    },
+    "android": {
+      "native_fixture_completed": true,
+      "baseline_counts_and_occupancy_match": true,
+      "result": "android-result.json",
+      "capture": "android-capture.json",
+      "video": "../../assets/android-native.mp4",
+      "gif": "../../assets/android-native.gif",
+      "artifact": "android-artifact.json",
+      "tested_device": "Android10/API29 on physical Pixel2",
+      "artifact_sha256": "f7d1709aeab873ca8abbaaae4be1b8331b5fa6e2b32b664987e9045bf19b1de4",
+      "baseline_gate": "External recorded counts/FNV comparison"
+    },
+    "macos": {
+      "native_fixture_completed": true,
+      "baseline_counts_and_occupancy_match": true,
+      "result": "macos-result.json",
+      "capture": "macos-capture.json",
+      "video": "../../assets/macos-native.mp4",
+      "gif": "../../assets/macos-native.gif",
+      "tested_host": "macOS-15.1.1-arm64-arm-64bit-Mach-O",
+      "native_binary_sha256": "00fe426e337c5aca4b31dc0ef36ff7ff0ea7626817a8baab527c0f1a0530edd9",
+      "baseline_gate": "Native replay counts/FNV/finite checks plus artifact hashes"
+    },
+    "linux": {
+      "native_fixture_completed": true,
+      "baseline_counts_and_occupancy_match": true,
+      "result": "linux-result.json",
+      "capture": "linux-capture.json",
+      "video": "../../assets/linux-native.mp4",
+      "gif": "../../assets/linux-native.gif",
+      "tested_host": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+      "native_binary_sha256": "fe7088311a45df2d155fbd9d4b34a21ab29df4dd8ec4eead962c95ad356ff7c2",
+      "baseline_gate": "Native replay counts/FNV/finite checks plus artifact hashes"
+    }
+  },
+  "geometry_comparison": {
+    "macos_linux_positions_sha256_equal": true,
+    "macos_ios_positions_sha256_equal": true,
+    "macos_ios_colors_sha256_equal": true,
+    "android": "Saved raw coordinates differ from normalized host/UIKit format; no raw byte-equality claim",
+    "desktop_details": "desktop-cross-platform.json"
+  }
+}

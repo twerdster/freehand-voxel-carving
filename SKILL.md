@@ -29,3 +29,43 @@ Before every commit, reread and synchronize SUMMARY.md and SKILL.md, verify root
 README/source unchanged, check doc links, image/video sizes and diff scope. Obtain
 a real Claude editorial review when requested; save its actual response and verify
 factual suggestions against code/results. Never invent review or runtime coverage.
+
+
+## Native fixture applications
+
+Use updated/PLATFORMS.md for the new C ABI, UIKit/SceneKit, Android/JNI/GLES20 and
+localhost desktop interfaces. Preserve original source/root README and build
+outside the repository. Android build metadata is in updated/android/VALIDATION.json;
+host/iOS source/build records and distinct device runtime/capture evidence are in
+updated/validation/native-platforms/. Confirm completion JSON and per-view counts,
+not merely a screen image. Only the 36-view supplied-camera fixture is validated;
+no live capture/tracking or restored historical app is implied.
+
+For C ABI changes rerun the four CTest component checks and the 36-view host replay.
+Freehand has no separate C-ABI prism regression comparable to Volume's test.
+For frontend changes check artifact writes/counts/finiteness, stale completion
+handling, repeated runs and actual geometry interaction. Serialize Android work
+across Activity recreation. Keep completion markers last and bind saved artifacts
+by hashes. Android completion does not gate the fixed baseline: compare its
+recorded counts/FNV externally rather than calling it baseline-verified. Normalize
+the documented saved coordinate formats before comparing
+platforms. Distinguish native CPU reconstruction from GPU display; optional orbit
+is display-only. Do not infer sanitizer coverage for new wrappers/frontends from
+prior offline core tests. Tie Claude claims to actual reviewed source snapshots;
+check its factual suggestions rather than applying them automatically.
+
+
+The UIKit display adapter converts a copy of byte RGBA to float4 in [0,1] for
+SceneKit; saved byte arrays/native operators are unchanged. The earlier physical
+white-color display failure is retained privately. A focused host test checks all
+256 byte values in each channel, finite range/error, source preservation and a
+known teal/alpha case; see updated/validation/native-platforms/ios-display-colors-test.json. Rebuild and recapture the
+iOS app for display changes; desktop/Android builds are unaffected.
+
+The final normalized-color iOS builds completed the same 36-view fixture on the
+physical iPhone with unchanged saved positions/colors and occupancy hashes. Actual
+recordings visibly show colored Freehand geometry/teal Volume points. The bounded
+8-file color-delta Claude review completed without material findings; it is a
+separate actual static invocation after the earlier 59-file review. See
+updated/validation/native-platforms/platform-status.json for current artifact,
+runtime and capture links. Preserve the existing SDK/live-capture limitations.

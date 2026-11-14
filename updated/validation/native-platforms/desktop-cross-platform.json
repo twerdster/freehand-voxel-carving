@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-14",
+  "scope": "final native C-ABI desktop replay of fixed 36-view dinosaur fixture",
+  "views": 36,
+  "occupancy_fnv_match": true,
+  "normalized_positions_sha256_match": true,
+  "color_bytes_compared": 302400,
+  "differing_color_channels": 10,
+  "maximum_color_channel_absolute_difference_0_to_255": 1,
+  "source_records": [
+    "macos-result.json",
+    "linux-result.json"
+  ],
+  "qualification": "cross-platform consistency on this fixture, not independent geometry or color accuracy"
+}

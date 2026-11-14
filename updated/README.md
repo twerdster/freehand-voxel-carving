@@ -1,12 +1,28 @@
 # Offline Freehand Voxel Carving replay
 
-![Dinosaur reconstructed by the recovered carving and marching-cubes code](assets/dinosaur-turntable.gif)
+| iPhone 12 · native execution | Offline colored-mesh rendering · macOS |
+| --- | --- |
+| <img src="assets/ios-native.gif" width="230" alt="Actual iPhone screen recording of the new native reconstruction interface"> | <img src="assets/dinosaur-turntable.gif" width="460" alt="Dinosaur reconstructed by the recovered carving and marching-cubes code"> |
+
+The phone runs the new frontend on supplied images and camera matrices; it does
+not capture or estimate poses. Recordings: [iOS](assets/ios-native.mp4) ·
+[Android](assets/android-native.mp4) · [macOS](assets/macos-native.mp4) ·
+[Linux](assets/linux-native.mp4).
+
 
 This update runs the recovered C++ voxel carving, marching cubes and color
 accumulation on macOS and Linux. The animation renders a mesh reconstructed from
 the bundled 36 dinosaur photographs, masks and camera matrices on the Mac. It is
 a new offline replay result. [PNG](assets/dinosaur-reconstruction.png) ·
 [MP4](assets/dinosaur-turntable.mp4).
+
+## New native interfaces
+
+The new [iOS, Android, macOS and Linux interfaces](PLATFORMS.md) execute the
+recovered C++ reconstruction on the supplied 36-view fixture, then render its
+computed geometry. They use known camera matrices and do not restore live camera
+capture or the historical SDK. [Build/runtime/capture records](validation/native-platforms/)
+keep executable results separate from recordings and declared platform support.
 
 ## Build and use
 
@@ -56,9 +72,10 @@ The historical-matrix replay on both platforms produced **22,377 occupied voxels
 25,200 triangles and 10,654 distinct RGB colors**. A separately written reference
 applying the same two-vote rule matched occupancy throughout the 128³ grid.
 Vertices were finite and within grid bounds; array lengths matched the triangle
-count, with no zero-area triangles. Exported
-geometry/faces match across platforms; five vertex colors differ by one level
-out of 255. [Validation and logs](VALIDATION.json) ·
+count, with no zero-area triangles. In this earlier `freehand_offline` comparison, exported geometry/faces matched
+across platforms and five vertex colors differed by one level out of 255. In the
+later native C-ABI desktop comparison, normalized positions matched and 10 RGBA
+channel bytes differed by 1/255 ([record](validation/native-platforms/desktop-cross-platform.json)). [Validation and logs](VALIDATION.json) ·
 per-view measurements: [Mac](validation/mac-historical-metrics.json) /
 [Linux](validation/linux-historical-metrics.json).
 

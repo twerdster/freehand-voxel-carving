@@ -1,0 +1,44 @@
+plugins { id 'com.android.application' }
+def datasetPath = providers.gradleProperty('dinosaurDataset').orElse(providers.environmentVariable('DINOSAUR_DATASET')).getOrElse('')
+if (!datasetPath) throw new GradleException('Set DINOSAUR_DATASET or -PdinosaurDataset to the recovered dinosaur directory')
+def dataset = file(datasetPath)
+def opencvSdk = providers.gradleProperty('opencvSdk').orElse(providers.environmentVariable('OPENCV_ANDROID_SDK')).getOrElse('')
+def nativeDir = providers.gradleProperty('predatorNativeDir').getOrElse('')
+android {
+ namespace 'org.awetzler.freehand.updated'
+ compileSdk 34
+ ndkVersion '27.2.12479018'
+ defaultConfig {
+  applicationId 'org.awetzler.freehand.updated'; minSdk 26; targetSdk 34; versionCode 1; versionName '2026.11-restoration'
+  ndk { abiFilters 'arm64-v8a', 'armeabi-v7a' }
+  externalNativeBuild { cmake { arguments '-DANDROID_STL=c++_shared', "-DOpenCV_DIR=${opencvSdk}/sdk/native/jni", '-DWVC_BUILD_TESTS=OFF', "-DPython3_EXECUTABLE=${providers.gradleProperty('hostPython').getOrElse('/opt/homebrew/bin/python3')}"; cppFlags '-std=c++17' } }
+ }
+ externalNativeBuild { cmake { path 'src/main/cpp/CMakeLists.txt'; version '3.22.1'; if (nativeDir) buildStagingDirectory file(nativeDir) } }
+ compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+ buildTypes { release { minifyEnabled false } }
+}
+def prepare = tasks.register('prepareInputs') {
+ inputs.dir(new File(dataset, 'pictures')); inputs.dir(new File(dataset, 'silhouettes')); inputs.dir(new File(dataset, 'matrices'))
+ outputs.dir(layout.buildDirectory.dir('generated/reconstruction-assets'))
+ doLast {
+  def output = layout.buildDirectory.dir('generated/reconstruction-assets').get().asFile
+  delete output; output.mkdirs()
+  copy { from(new File(dataset,'pictures')) { include 'viff.*.png'; into 'pictures' }; from(new File(dataset,'silhouettes')) { include 'sil_*.png'; into 'silhouettes' }; into output }
+  for (int i=1;i<=36;i++) { if (!new File(output,"pictures/viff.${i}.png").isFile() || !new File(output,"silhouettes/sil_${i}.png").isFile()) throw new GradleException("Missing input view ${i}") }
+  def header = new File(dataset, 'matrices/matricesData.h')
+        def text = header.text.replaceAll(/(?m)\/\/.*$/, '')
+        def table = text.substring(text.indexOf('{', text.indexOf('static double demoP')))
+        table = table.substring(0, table.indexOf('};'))
+        def values = (table =~ /[-+]?\d+(?:\.\d+)?/).collect { it.toDouble() }
+        if (values.size() != 432) throw new GradleException('Expected 36x12 historical demoP values')
+        new File(output, 'calibration.json').text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson([matrix_source:'unchanged rounded upstream demoP table',image_width:720,image_height:576,cube_corner:[-0.1307,-0.1307,-0.7483],cube_side:0.2463,projection_matrices:values.collate(12)]))
+        
+  def manifest = [:]
+  fileTree(output).files.sort().each { f -> if (f.isFile()) manifest[output.toPath().relativize(f.toPath()).toString()] = [bytes:f.length(),sha256:java.security.MessageDigest.getInstance('SHA-256').digest(f.bytes).encodeHex().toString()] }
+  new File(output,'input-manifest.json').text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(manifest))
+  copy { from(rootProject.file('gradle')) { include 'LICENSE','NOTICE'; into 'licenses/gradle-wrapper' }; into output }
+  copy { from("${opencvSdk}/LICENSE") { into "licenses/opencv" }; from("${opencvSdk}/sdk/etc/licenses") { into "licenses/opencv/dependencies" }; from(rootProject.file("../../source/PointCloudSample/LICENSE")) { into "licenses/recovered-sample" }; into output }
+ }
+}
+android.sourceSets.main.assets.srcDir(layout.buildDirectory.dir('generated/reconstruction-assets'))
+tasks.named('preBuild').configure { dependsOn prepare }

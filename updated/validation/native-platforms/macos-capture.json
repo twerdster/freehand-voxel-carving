@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-14",
+  "platform": "macos",
+  "actual_execution": "Browser Compute button starts native C-ABI executable on the same host, processes all 36 fixture views, then renders its computed geometry",
+  "capture": "headed Chrome viewport on macOS via timed Playwright screenshots",
+  "sampled_frames": 25,
+  "frame_timing": "actual sample timestamp differences preserved in concat encoding; source nominal 5 fps, MP4 encoded 10 fps by frame duplication, GIF 5 fps",
+  "source_duration_seconds": 5.022,
+  "display": "Bounding-box centering/scaling and axis rotation only; saved native coordinate arrays are unchanged",
+  "scope": "fixed recovered dinosaur fixture and supplied cameras; no live capture, pose tracking, general accuracy or performance benchmark",
+  "media": [
+    {
+      "path": "updated/assets/macos-native.mp4",
+      "bytes": 140370,
+      "sha256": "6d7561eeefba56ae2d680f37db7e18cd0871ee81cf05917e2ab4b925e918c372"
+    },
+    {
+      "path": "updated/assets/macos-native.gif",
+      "bytes": 294105,
+      "sha256": "e1a81be35c06e1d79489244bcc859681ac7ccab241f641236114595a436ae444"
+    },
+    {
+      "path": "updated/assets/macos-native.png",
+      "bytes": 214585,
+      "sha256": "62437d1afedbd926188816306f45b88ce035bceaa82eb62a54465e677c34aadf"
+    }
+  ],
+  "source_frame_sha256": [
+    "446fab838c836c7eb9c14e647f193d28a0adbee1936a8d9ca0e261cd92bd4280",
+    "8889e18928f77a8237d5e1de2cb9788e43812cfa2d458cfaadfe1cbaccc1b0ad",
+    "0afe5530f72375f64eb867b46e0ff57dafcfb1a88b1dcd558eba5e6febd07d4f",
+    "0afe5530f72375f64eb867b46e0ff57dafcfb1a88b1dcd558eba5e6febd07d4f",
+    "420a43d379c520d1fae3526397929d8f4a0d011cff168675cb9b7d2b216da035",
+    "967f822ab7a2e83d7fb5704be905577ab29374dbb515b4f3d976cc1e483cb693",
+    "967f822ab7a2e83d7fb5704be905577ab29374dbb515b4f3d976cc1e483cb693",
+    "9e9f70526ece772a6f187414703c469aeb135187f86cd35682b0a157d489113b",
+    "3da5fa20c3a17672d6c560fb688497a79bd3494a27a73e20f5174fc2257c1f82",
+    "b0ed0e7f27ecd8c1506bd7d2c66a314d7b7ea758fae3ffb6f6872ece509bd23e",
+    "cdef7e99186076fa8604d8dbae881863adb2aaf563460538c9b043b74c0ae86a",
+    "da1063cb2fd1b1d6b855ef16da897a5dca5603bf9706ac381de47b7fe169fee6",
+    "774ba3c698cfe5cace22b6224b222ac0ba4a4aa9c6b2ade586a40535c9fc64b3",
+    "c41cde03707fac6261dafc966e20ee810eeb5a88251f1be54a3f6fdd9fd84280",
+    "1ba424ec930d26f89c41ebf28ab0b761be3b36eb238bb37d5c45e4bf362b02a6",
+    "ca9879e2d34113ecbd3c0b9fe2b753151ec2ef8cef3eaade548cb7e9cc90cd30",
+    "f79b640478d3e42aae2f6b3cab6e973e74d5cc1710b0544c3dd380721dda64de",
+    "a1a9b1b25db80d5f842dea1fe9428f098ccc4e2efe9960869b7ba45e61932347",
+    "6052f7c8d742406f948cd6b36be7dd5d2ae84906ce2d7c1b1bde11f13c6398ee",
+    "279279b528c557bf60ab2f6d29ca9830a4fc00b46dd7378bccf2abe82f363a93",
+    "26aa0396c992c003c8dfbe2d213504b145a030a281145c547db6a333a7465e39",
+    "fe612a737ae9d65dfd3f5246f83a8b2595af340710105de70d0ca6b4eabb7d6d",
+    "7c60038e3a8896088a4a88fa0122702aadfb9a0cb713d316cbb17413c69b0117",
+    "199e6d5cd30e9c5c788b243404e87a781236c28342452144c7918ac87ec03dbf",
+    "153cdd663a720460a672f510e9490d479ee71d823195c49a5622acfd6c73007e"
+  ],
+  "browser_checks": {
+    "rendered": 75600,
+    "positionsReady": true,
+    "status": "Native computation complete; drag the computed result to rotate.",
+    "metrics": "22,377 raw voxels \u00b7 22,377 observed \u00b7 25,200 triangles \u00b7 0.97 s measured run",
+    "glError": 0,
+    "overflow": false,
+    "dragChangesYaw": true,
+    "errors": [],
+    "externalRequests": [],
+    "browser": "157.0.8103.51",
+    "hostPlatform": "darwin"
+  },
+  "completion": {
+    "native_views": 36,
+    "raw_voxels": 22377,
+    "observed_voxels": 22377,
+    "triangles": 25200,
+    "rendered_vertices": 75600,
+    "occupancy_fnv1a64": "803e245304c9b374"
+  },
+  "final_frame_hold_seconds": 0.2,
+  "duration_note": "Source duration includes a final0.2-second hold after the last timestamp; the raw capture reports first-to-last timestamp difference."
+}

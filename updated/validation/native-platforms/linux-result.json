@@ -1,0 +1,239 @@
+{
+  "completed": true,
+  "native_views": 36,
+  "raw_voxels": 22377,
+  "observed_voxels": 22377,
+  "triangles": 25200,
+  "rendered_vertices": 75600,
+  "occupancy_fnv1a64": "803e245304c9b374",
+  "occupancy_after_each_view": [
+    2000376,
+    363188,
+    268673,
+    189056,
+    131958,
+    97227,
+    74930,
+    59423,
+    49583,
+    42420,
+    38108,
+    35894,
+    33627,
+    31418,
+    29730,
+    28231,
+    27411,
+    27070,
+    26772,
+    26422,
+    26073,
+    25761,
+    25462,
+    25143,
+    24672,
+    24208,
+    23928,
+    23732,
+    23517,
+    23311,
+    23092,
+    22863,
+    22635,
+    22501,
+    22415,
+    22377
+  ],
+  "input": "36 real dinosaur masks/photos; supplied rounded cameras",
+  "camera_capture": false,
+  "pose_tracking": false,
+  "run_id": "1794639311000122410",
+  "elapsed_seconds": 0.8948741590138525,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "native_binary_sha256": "fe7088311a45df2d155fbd9d4b34a21ab29df4dd8ec4eead962c95ad356ff7c2",
+  "positions_sha256": "30f170cef8c22246de0371d2a6aa0a806b502b67ef7db6dd58b02995a7892a62",
+  "colors_sha256": "461871d6496e42f655f2aaf7d5e02024963a6ee874bbc87b998c6365f57ac7d3",
+  "new_frontend": "localhost browser UI starts native C ABI replay",
+  "per_view_native_trace": [
+    {
+      "view": 1,
+      "raw_voxels": 2000376,
+      "observed_voxels": 2000376
+    },
+    {
+      "view": 2,
+      "raw_voxels": 363188,
+      "observed_voxels": 363188
+    },
+    {
+      "view": 3,
+      "raw_voxels": 268673,
+      "observed_voxels": 268673
+    },
+    {
+      "view": 4,
+      "raw_voxels": 189056,
+      "observed_voxels": 189056
+    },
+    {
+      "view": 5,
+      "raw_voxels": 131958,
+      "observed_voxels": 131958
+    },
+    {
+      "view": 6,
+      "raw_voxels": 97227,
+      "observed_voxels": 97227
+    },
+    {
+      "view": 7,
+      "raw_voxels": 74930,
+      "observed_voxels": 74930
+    },
+    {
+      "view": 8,
+      "raw_voxels": 59423,
+      "observed_voxels": 59423
+    },
+    {
+      "view": 9,
+      "raw_voxels": 49583,
+      "observed_voxels": 49583
+    },
+    {
+      "view": 10,
+      "raw_voxels": 42420,
+      "observed_voxels": 42420
+    },
+    {
+      "view": 11,
+      "raw_voxels": 38108,
+      "observed_voxels": 38108
+    },
+    {
+      "view": 12,
+      "raw_voxels": 35894,
+      "observed_voxels": 35894
+    },
+    {
+      "view": 13,
+      "raw_voxels": 33627,
+      "observed_voxels": 33627
+    },
+    {
+      "view": 14,
+      "raw_voxels": 31418,
+      "observed_voxels": 31418
+    },
+    {
+      "view": 15,
+      "raw_voxels": 29730,
+      "observed_voxels": 29730
+    },
+    {
+      "view": 16,
+      "raw_voxels": 28231,
+      "observed_voxels": 28231
+    },
+    {
+      "view": 17,
+      "raw_voxels": 27411,
+      "observed_voxels": 27411
+    },
+    {
+      "view": 18,
+      "raw_voxels": 27070,
+      "observed_voxels": 27070
+    },
+    {
+      "view": 19,
+      "raw_voxels": 26772,
+      "observed_voxels": 26772
+    },
+    {
+      "view": 20,
+      "raw_voxels": 26422,
+      "observed_voxels": 26422
+    },
+    {
+      "view": 21,
+      "raw_voxels": 26073,
+      "observed_voxels": 26073
+    },
+    {
+      "view": 22,
+      "raw_voxels": 25761,
+      "observed_voxels": 25761
+    },
+    {
+      "view": 23,
+      "raw_voxels": 25462,
+      "observed_voxels": 25462
+    },
+    {
+      "view": 24,
+      "raw_voxels": 25143,
+      "observed_voxels": 25143
+    },
+    {
+      "view": 25,
+      "raw_voxels": 24672,
+      "observed_voxels": 24672
+    },
+    {
+      "view": 26,
+      "raw_voxels": 24208,
+      "observed_voxels": 24208
+    },
+    {
+      "view": 27,
+      "raw_voxels": 23928,
+      "observed_voxels": 23928
+    },
+    {
+      "view": 28,
+      "raw_voxels": 23732,
+      "observed_voxels": 23732
+    },
+    {
+      "view": 29,
+      "raw_voxels": 23517,
+      "observed_voxels": 23517
+    },
+    {
+      "view": 30,
+      "raw_voxels": 23311,
+      "observed_voxels": 23311
+    },
+    {
+      "view": 31,
+      "raw_voxels": 23092,
+      "observed_voxels": 23092
+    },
+    {
+      "view": 32,
+      "raw_voxels": 22863,
+      "observed_voxels": 22863
+    },
+    {
+      "view": 33,
+      "raw_voxels": 22635,
+      "observed_voxels": 22635
+    },
+    {
+      "view": 34,
+      "raw_voxels": 22501,
+      "observed_voxels": 22501
+    },
+    {
+      "view": 35,
+      "raw_voxels": 22415,
+      "observed_voxels": 22415
+    },
+    {
+      "view": 36,
+      "raw_voxels": 22377,
+      "observed_voxels": 22377
+    }
+  ]
+}

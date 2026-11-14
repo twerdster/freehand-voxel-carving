@@ -1,0 +1,64 @@
+{
+  "platform": "ios",
+  "capture": "USB AVFoundation physical iPhone display",
+  "source_sha256": "1585e42efa440a68ff11c35fef441b1d64b4635336be29ab817ca9bc7b28f41a",
+  "source_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_type": "video",
+        "width": 1170,
+        "height": 2532
+      }
+    ],
+    "format": {
+      "duration": "25.536167",
+      "size": "45583716"
+    }
+  },
+  "source_start_seconds": 3.0,
+  "excerpt_duration_seconds": 22.0,
+  "crop": {
+    "top": 120,
+    "bottom": 44
+  },
+  "audio_removed": true,
+  "poster_offset_in_excerpt_seconds": 1.5,
+  "playback": "capture timing retained; input replay speed follows labels in app",
+  "files": [
+    {
+      "path": "updated/assets/ios-native.mp4",
+      "bytes": 700297,
+      "sha256": "e827ec73856cc68d53f3462a0c3577fb39bd354cfe71ae6c5a0c1b6f74a8b04c"
+    },
+    {
+      "path": "updated/assets/ios-native.gif",
+      "bytes": 358695,
+      "sha256": "27d365091ee603edbe68a4a54a1ee45e4d7d38d394613bf7afcb09d4d299f336"
+    },
+    {
+      "path": "updated/assets/ios-native.png",
+      "bytes": 269324,
+      "sha256": "0e6a3c0aea9ddb2dcf1858cec5609261e2384999890f50c93734a17c2eb95072"
+    }
+  ],
+  "poster_selection": "Completed colored geometry from the actual MP4",
+  "gif_offset_in_excerpt_seconds": 0,
+  "gif_excerpt_duration_seconds": 11,
+  "gif_source_start_seconds": 3,
+  "visual_qa": {
+    "source_sample_seconds": [
+      3,
+      4,
+      6,
+      10,
+      16,
+      24
+    ],
+    "first_frame": "Clean current project interface; supplied-input native computation begins before/result follows in capture",
+    "later_frames": "Colored Freehand mesh / teal Volume points, actual computed counts and display-only orbit",
+    "os_or_personal_content": "none in inspected crop/frames",
+    "native_result_saved_arrays": "Final device hashes match host baseline; source display conversion did not alter saved arrays"
+  }
+}
